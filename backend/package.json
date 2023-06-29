@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm start",
-    "build": "ng build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --detectOpenHandles --testEnvironment=node --runInBand --coverage --forceExit",
+    "start": "npm start"
   },
   "author": "",
   "license": "ISC",

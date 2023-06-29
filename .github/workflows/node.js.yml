@@ -16,7 +16,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14'
+        node-version: '16'
 
     - name: Install backend dependencies
       run: npm install --prefix backend
@@ -34,19 +34,16 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14'
+        node-version: '16'
 
     - name: Install dependencies
-      run: |
-        cd projeto_c214_l1
-        npm install
+      run: npm install --prefix projeto_c214_l1
+
 
     - name: Build project
-      run: |
-        cd projeto_c214_l1
-        npm run build
+      run:
+        npm run build --prefix projeto_c214_l1
 
     - name: Run additional tasks
-      run: |
-        cd projeto_c214_l1
-        npm run additional-tasks
+      run:
+        npm run additional-tasks --prefix projeto_c214_l1

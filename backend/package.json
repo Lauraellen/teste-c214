@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --detectOpenHandles --testEnvironment=node --runInBand --coverage --forceExit",
-    "start": "npm start"
+    "build": "npm run compile"
+
   },
   "author": "",
   "license": "ISC",

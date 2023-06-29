@@ -19,13 +19,19 @@ jobs:
         node-version: '14'
 
     - name: Install dependencies
-      run: npm install
-      
-    - name: Build project
-      run: npm start
+      run: |
+        cd backend
+        npm install
+    
+    - name: Build projects
+      run: |
+        cd backend
+        npm start
 
     - name: Run tests
-      run: npm test
+      run: |
+        cd backend
+        npm test
 
   projeto_c214_l1:
     runs-on: ubuntu-latest
@@ -40,10 +46,16 @@ jobs:
         node-version: '14'
 
     - name: Install dependencies
-      run: npm install
+      run: |
+        cd projeto_c214_l1
+        npm install
 
     - name: Build project
-      run: npm run build
+      run: |
+        cd projeto_c214_l1
+        npm run build
 
     - name: Run additional tasks
-      run: npm run additional-tasks
+      run: |
+        cd projeto_c214_l1
+        npm run additional-tasks

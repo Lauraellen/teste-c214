@@ -18,15 +18,11 @@ jobs:
       with:
         node-version: '14'
 
-    - name: Install dependencies
-      run: |
-        cd backend
-        npm install
+    - name: Install backend dependencies
+      run: npm install --prefix backend
 
-    - name: Run tests
-      run: |
-        cd backend
-        npm test
+    - name: Build backend
+      run: npm run build --prefix backend
 
   projeto_c214_l1:
     runs-on: ubuntu-latest

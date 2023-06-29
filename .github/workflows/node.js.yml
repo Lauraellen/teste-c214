@@ -16,22 +16,16 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14'
+        node-version: '18'
 
     - name: Install dependencies
-      run: |
-        cd backend
-        npm install
-    
-    - name: Build projects
-      run: |
-        cd backend
-        npm start --silent
-
+      run: npm i
+  
     - name: Run tests
-      run: |
-        cd backend
-        npm test
+      run: npm test
+        
+    - name: Build and package
+      run: npm run build
 
   projeto_c214_l1:
     runs-on: ubuntu-latest
@@ -46,11 +40,10 @@ jobs:
         node-version: '14'
 
     - name: Install dependencies
-      run: |
-        cd projeto_c214_l1
-        npm install
-
-    - name: Build project
-      run: |
-        cd projeto_c214_l1
-        npm run start
+      run: npm i
+  
+    - name: Run tests
+      run: npm test
+        
+    - name: Build and package
+      run: npm run build

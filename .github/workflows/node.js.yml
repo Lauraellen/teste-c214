@@ -38,7 +38,7 @@ jobs:
       run: npm run build --prefix backend
 
 
-  projeto_c214_l1:
+  projeto_c214_l1-install:
     runs-on: ubuntu-latest
 
     steps:
@@ -53,7 +53,11 @@ jobs:
     - name: Install dependencies
       run: npm install --prefix projeto_c214_l1
 
+  projeto_c214_l1-build:
+    needs: projeto_c214_l1-install
+    runs-on: ubuntu-latest
 
+    steps:
     - name: Build project
       run:
         npm run build --prefix projeto_c214_l1

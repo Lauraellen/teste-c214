@@ -1,0 +1,65 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+thead {
+    background-color: #f2f2f2;
+    font-family: "Roboto", sans-serif;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    font-family: "Roboto", sans-serif;
+
+}
+
+th {
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #eaeaea;
+}
+
+/* style.css */
+.action-buttons-container {
+    display: flex;
+    gap: 10px;
+    /* Espaçamento entre os botões */
+}
+
+.action-button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-button svg {
+    fill: #007bff;
+    /* Cor do ícone */
+    width: 24px;
+    /* Ajuste o tamanho do ícone conforme necessário */
+    height: 24px;
+}
+
+.filter-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+}
